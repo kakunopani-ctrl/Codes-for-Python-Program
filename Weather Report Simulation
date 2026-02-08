@@ -1,0 +1,11 @@
+import random
+
+conditions = ["Sunny", "Rainy", "Cloudy", "Stormy"]
+temp = random.randint(15, 35)
+condition = random.choice(conditions)
+
+print(f"Today's weather: {condition}, {temp}°C")
+if condition == "Rainy":
+    print("Carry an umbrella!")
+elif temp > 30:
+    print("Stay hydrated!")
