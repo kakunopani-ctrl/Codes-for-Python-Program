@@ -1,0 +1,18 @@
+tasks = []
+
+def add_task(task):
+    tasks.append({"task": task, "done": False})
+
+def complete_task(index):
+    tasks[index]["done"] = True
+
+def show_tasks():
+    for i, t in enumerate(tasks):
+        status = "✔" if t["done"] else "✘"
+        print(f"{i+1}. {t['task']} [{status}]")
+
+add_task("Learn Python")
+add_task("Practice C++")
+show_tasks()
+complete_task(0)
+show_tasks()
