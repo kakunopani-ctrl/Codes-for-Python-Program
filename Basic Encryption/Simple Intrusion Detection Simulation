@@ -1,0 +1,14 @@
+attempts = {}
+
+def login(username, success):
+    if not success:
+        attempts[username] = attempts.get(username, 0) + 1
+        if attempts[username] > 3:
+            print(f"Alert: Multiple failed attempts for {username}")
+    else:
+        print(f"{username} logged in successfully.")
+
+login("alice", False)
+login("alice", False)
+login("alice", False)
+login("alice", False)
