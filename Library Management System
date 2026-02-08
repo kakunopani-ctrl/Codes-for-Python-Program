@@ -1,0 +1,16 @@
+library = {"Python Basics": True, "C++ Fundamentals": True}
+
+def borrow_book(title):
+    if library.get(title):
+        library[title] = False
+        print(f"You borrowed '{title}'")
+    else:
+        print(f"'{title}' is not available")
+
+def return_book(title):
+    library[title] = True
+    print(f"You returned '{title}'")
+
+borrow_book("Python Basics")
+borrow_book("Python Basics")
+return_book("Python Basics")
